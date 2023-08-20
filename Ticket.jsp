@@ -6,6 +6,22 @@
     <meta charset="UTF-8">
     <title>Booking Details</title>
     <style>
+    tr.border-top {
+            border-top: 1px solid black;
+        }
+        
+        tr.border-bottom {
+            border-bottom: 1px solid black;
+        }
+        
+        /* Apply border to specific columns */
+        td.border-left {
+            border-left: 1px solid black;
+        }
+        
+        td.border-right {
+            border-right: 1px solid black;
+        }
         .center {
             text-align: center;
         }
@@ -14,18 +30,21 @@
             border:none;
         }
         th, td {
-            border:none;
+           
             padding: 5px;
             text-align: center;
+        }
+        th.column1, td.column1 {
+            width: 150px;
         }
     </style>
 </head>
 <body>
-    <h3 class="center" style="color: green;">Your tickets are successfully booked</h3>
-    
+    <h1 class="center" style="color: green;">Your tickets are successfully booked</h1><br><br><br>
+    <h2 align="center">TicketDetails</h2>
     <table>
         <tr>
-            <th>BOOKED FROM</th>
+            <th>FROM</th>
             <th>Date</th>
             <th>TO</th>
         </tr>
@@ -51,7 +70,7 @@
     
     <br><br>
     
-    <h4 class="center">Passenger Details:</h4>
+    <h2 class="center">Passenger Details:</h2>
     <br>
     
     <table>
@@ -76,6 +95,7 @@
         </tr>
         <% }
         } %>
-    </table>
+    </table><br>
+    <div align="center"><h3>Total Fare :<%=(double)request.getAttribute("fare") %></h3></div>
 </body>
 </html>
